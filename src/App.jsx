@@ -1,21 +1,21 @@
 import './App.css'
-const TelegramBot = require("node-telegram-bot-api");
-const token = "853908338:AAFHNbIxTUH2yT8R41jqblnQXdde43iv780";
 export default function App() {
   return (
-const bot = new TelegramBot(
+		const TelegramBot = require("node-telegram-bot-api");
+		const token = "853908338:AAFHNbIxTUH2yT8R41jqblnQXdde43iv780";
+		const bot = new TelegramBot(
   token, {
   poiling: true
 }
 );
 
-var keybrdMnu = [
+		var keybrdMnu = [
   [
     { text: "menu" }
   ]
 ]
 
-var bayar = [
+		var bayar = [
   [
     { text: "keranjang" },
     { text: "tambah item lagi" }
@@ -29,17 +29,17 @@ var bayar = [
   ]
 ]
 
-var hide = [
+		var hide = [
   [
     { text: "sembunyikan" }
   ]
 ]
 
-var hideKeybord = [
+		var hideKeybord = [
   { hide_keyboard: true }
 ]
 
-bot.onText(
+		bot.onText(
   /\/echo.+/, (msg, match) => {
     const chatId = msg.chat.id;
     const resp = match[1];
@@ -48,7 +48,7 @@ bot.onText(
   }
 );
 
-bot.on(
+		bot.on(
   'message', (msg) => {
     const chatId = msg.chat.id;
     const konten = msg.text;
