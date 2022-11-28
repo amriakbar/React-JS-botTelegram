@@ -1,4 +1,6 @@
 import './App.css'
+import 'node-telegram-bot-api'
+
 export default function App() {
   return (
 		const TelegramBot = require("node-telegram-bot-api");
